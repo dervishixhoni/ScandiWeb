@@ -16,11 +16,11 @@
     <div class="d-flex justify-content-between my-4 border-bottom border-black">
         <h1>Product List</h1>
         <div>
-            <a class="btn btn-primary" href="/add-product">Add Product</a>
+            <a class="btn btn-primary" href="/add-product.php">Add Product</a>
             <button class="btn btn-danger" id="delete-product-btn" onclick="document.getElementById('delete-form').submit();">Mass Delete</button>
         </div>
     </div>
-    <form id="delete-form" method="post" action="/mass-delete">
+    <form id="delete-form" method="post" action="/mass-delete.php">
         <div class="row">
             <?php foreach ($products as $product): ?>
                 <div class="col-md-3">

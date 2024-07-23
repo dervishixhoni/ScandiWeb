@@ -117,7 +117,7 @@
         event.preventDefault();
         const form = event.target;
         const data = new FormData(form);
-        fetch('/add-product', {
+        fetch('/add-product.php', {
             method: 'POST',
             body: data
         })

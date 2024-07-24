@@ -1,4 +1,3 @@
-<!-- src/View/product_list.php -->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -12,32 +11,33 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="d-flex justify-content-between my-4 border-bottom border-black">
-        <h1>Product List</h1>
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center border-3 border-black border-bottom pb-2 mb-4">
+        <h1 class="h3">Product List</h1>
         <div>
-            <a class="btn btn-primary" href="/add-product.php">Add Product</a>
+            <a class="btn btn-primary me-2" href="/add-product.php">Add Product</a>
             <button class="btn btn-danger" id="delete-product-btn" onclick="document.getElementById('delete-form').submit();">Mass Delete</button>
         </div>
     </div>
     <form id="delete-form" method="post" action="/mass-delete.php">
-        <div class="row">
+        <div class="row g-3">
             <?php foreach ($products as $product): ?>
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <input type="checkbox" class="delete-checkbox" name="product_ids[]" value="<?= htmlspecialchars($product['id']) ?>">
-                            <p>SKU : <?= htmlspecialchars($product['sku']) ?></p>
-                            <p>Name : <?= htmlspecialchars($product['name']) ?></p>
-                            <p>Price : <?= htmlspecialchars($product['price']) ?>$</p>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card border-3 border-black rounded-2 h-100">
+                        <div class="card-body text-center p-4"> <!-- Bootstrap padding class -->
+                            <input type="checkbox" class="delete-checkbox form-check-input mb-3" style="transform: scale(1.2);" name="product_ids[]" value="<?= htmlspecialchars($product['id']) ?>">
+                            <p class="mb-1 fs-5 fw-bold">SKU: <?= htmlspecialchars($product['sku']) ?></p> <!-- Bootstrap font size class -->
+                            <p class="mb-1 fs-5 fw-bold">Name: <?= htmlspecialchars($product['name']) ?></p>
+                            <p class="mb-1 fs-5 fw-bold">Price: <?= htmlspecialchars($product['price']) ?>$</p>
+                            <p class="mb-1 fs-5 fw-bold">Type: <?= htmlspecialchars($product['type']) ?></p>
                             <?php if ($product['type'] == 'Book'): ?>
-                                <p>Weight: <?= htmlspecialchars($product['weight']) ?>kg</p>
+                                <p class="mb-1 fs-5 fw-bold">Weight: <?= htmlspecialchars($product['weight']) ?>kg</p>
                             <?php elseif ($product['type'] == 'DVD'): ?>
-                                <p>Size: <?= htmlspecialchars($product['size']) ?>MB</p>
+                                <p class="mb-1 fs-5 fw-bold">Size: <?= htmlspecialchars($product['size']) ?>MB</p>
                             <?php elseif ($product['type'] == 'Furniture'): ?>
-                                <p>Height: <?= htmlspecialchars($product['height']) ?>cm</p>
-                                <p>Width: <?= htmlspecialchars($product['width']) ?>cm</p>
-                                <p>Length: <?= htmlspecialchars($product['length']) ?>cm</p>
+                                <p class="mb-1 fs-5 fw-bold">Height: <?= htmlspecialchars($product['height']) ?>cm</p>
+                                <p class="mb-1 fs-5 fw-bold">Width: <?= htmlspecialchars($product['width']) ?>cm</p>
+                                <p class="mb-1 fs-5 fw-bold">Length: <?= htmlspecialchars($product['length']) ?>cm</p>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -46,5 +46,6 @@
         </div>
     </form>
 </div>
+
 </body>
 </html>

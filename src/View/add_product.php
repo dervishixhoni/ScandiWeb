@@ -12,11 +12,11 @@
 <body>
 
 <div class="container">
-    <div class="d-flex justify-content-between my-4 border-bottom border-black">
+    <div class="d-flex justify-content-between my-4 border-3 border-black border-bottom">
         <h1>Add Product</h1>
         <div>
             <button class="btn btn-primary" type="submit" form="product_form">Save</button>
-            <a class="btn btn-secondary" href="/">Cancel</a>
+            <a class="btn btn-danger" href="/">Cancel</a>
         </div>
     </div>
     <form id="product_form" method="POST" class="">
@@ -123,16 +123,23 @@
         })
             .then(response => response.json())
             .then(data => {
-                if (data.error) {
+                if (data.success === undefined) {
                     showNotification(data.error);
                 } else {
+                    console.log(data.success);
                     window.location.href = '/';
                 }
             });
     });
 
     function showNotification(message) {
-        notification.textContent = message;
+
+        const notification = document.getElementById('notification');
+        message.forEach(msg => {
+            const p = document.createElement('p');
+            p.textContent = msg;
+            notification.appendChild(p);
+        });
         notification.classList.add('show');
 
         setTimeout(() => {

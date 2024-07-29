@@ -7,11 +7,7 @@ class ProductFactory {
         try {
             switch ($type) {
                 case 'Book':
-                    try {
-                        $product = new Book($sku, $name, $price, $attribute1);
-                    } catch (Exception $e) {
-                        throw $e;
-                    }
+                    $product = new Book($sku, $name, $price, $attribute1);
                     break;
                 case 'DVD':
                     $product = new DVD($sku, $name, $price, $attribute1);

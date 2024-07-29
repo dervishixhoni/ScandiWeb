@@ -19,7 +19,7 @@
             <a class="btn btn-danger" href="/">Cancel</a>
         </div>
     </div>
-    <form id="product_form" method="POST" class="">
+    <form id="product_form" method="POST">
         <div class="mb-3">
             <label for="sku" class="form-label">SKU:</label>
             <input type="text" class="form-control w-auto" id="sku" name="sku" required>
@@ -114,23 +114,36 @@
         updateFields();
     });
     document.getElementById('product_form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const form = event.target;
-        const data = new FormData(form);
-        fetch('/add-product.php', {
-            method: 'POST',
-            body: data
+    event.preventDefault();
+    const form = event.target;
+    const data = new FormData(form);
+
+    fetch('/save-product.php', {
+        method: 'POST',
+        body: data
+    })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw new Error(errorData.message || 'Something went wrong');
+                });
+            }
+            return response.json();
         })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success === undefined) {
-                    showNotification(data.error);
-                } else {
-                    console.log(data.success);
+        .then(data => {
+            if (data.message) {
+                console.log(data.message);
+                //showNotification(data.message); // Show success or error message
+                if (data.message === "Product saved successfully.") {
                     window.location.href = '/';
                 }
-            });
-    });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error.message);
+            //showNotification(error.message); // Show error message
+        });
+});
 
     function showNotification(message) {
 

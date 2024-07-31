@@ -26,7 +26,7 @@ function ProductList() {
   };
 
   return (
-    <div>
+    <div className='w-75 m-auto my-3'>
       <div className="d-flex justify-content-between align-items-center border-3 border-black border-bottom pb-2 mb-4">
         <h1>Product List</h1>
         <div>
@@ -36,15 +36,15 @@ function ProductList() {
       </div>
       <div className='row g-3'>
         {products.map(product => (
-          <div className='col-12 col-sm-6 col-md-6 col-lg-3'>
+          <div className='col-12 col-sm-6 col-md-6 col-lg-3' key={product.id}>
             <div className='card border-3 border-black rounded-2 h-100'>
-                <div className='card-body text-center p-4' key={product.id}>
+              <div className='card-body text-center p-4'>
                 <input
                   type="checkbox"
                   className="delete-checkbox"
                   checked={product.isChecked || false}
                   onChange={() => setProducts(products.map(p => p.sku === product.sku ? { ...p, isChecked: !p.isChecked } : p))} />
-                <p className='mb-1 fs-5 fw-bold'>{product.sku}</p> 
+                <p className='mb-1 fs-5 fw-bold'>{product.sku}</p>
                 <p className='mb-1 fs-5 fw-bold'>{product.name}</p>
                 <p className='mb-1 fs-5 fw-bold'>${product.price}</p>
                 <p className='mb-1 fs-5 fw-bold'>{product.specificAttribute}</p>

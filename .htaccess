@@ -1,7 +1,0 @@
-RewriteEngine On
-
-# Rewrite rule for the main page
-RewriteRule ^$ index.php [L]
-
-# Rewrite rule for the add product page
-RewriteRule ^add-product$ add-product.php [L]

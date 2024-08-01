@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="PS-242.20224.112">
-    <data-source name="product_app@localhost" uuid="3d46310a-c581-42e6-98b8-89e5b34c0a86">
+  <component name="dataSourceStorageLocal" created-in="PS-242.20224.175">
+    <data-source name="product_app@localhost" uuid="ff83ad66-7761-4244-9176-c0813634d485">
       <database-info product="MariaDB" version="11.4.2-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="11.4.2" exact-driver-version="3.3">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>

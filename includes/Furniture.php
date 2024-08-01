@@ -1,25 +1,51 @@
 <?php
-class Furniture extends Product {
+
+class Furniture extends Product
+{
     private $height;
     private $width;
     private $length;
 
-    public function __construct($sku, $name, $price, $height, $width, $length) {
+    public function __construct($sku, $name, $price, $weight, $size, $length, $width, $height)
+    {
         parent::__construct($sku, $name, $price, 'Furniture');
         $this->height = $height;
         $this->width = $width;
         $this->length = $length;
     }
 
-    public function getHeight() { return $this->height; }
-    public function getWidth() { return $this->width; }
-    public function getLength() { return $this->length; }
+    public function getHeight()
+    {
+        return $this->height;
+    }
 
-    public function setHeight($height) { $this->height = $height; }
-    public function setWidth($width) { $this->width = $width; }
-    public function setLength($length) { $this->length = $length; }
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
 
-    public function save($conn) {
+    public function getWidth()
+    {
+        return $this->width;
+    }
+
+    public function setWidth($width)
+    {
+        $this->width = $width;
+    }
+
+    public function getLength()
+    {
+        return $this->length;
+    }
+
+    public function setLength($length)
+    {
+        $this->length = $length;
+    }
+
+    public function save($conn)
+    {
         $query = "INSERT INTO products (sku, name, price, type, height, width, length) VALUES (:sku, :name, :price, :type, :height, :width, :length)";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':sku', $this->sku);
@@ -31,9 +57,5 @@ class Furniture extends Product {
         $stmt->bindParam(':length', $this->length);
         $stmt->execute();
     }
-
-    public function getSpecificAttribute() {
-        return "Dimensions: " . $this->height . "x" . $this->width . "x" . $this->length;
-    }
 }
-?>
+

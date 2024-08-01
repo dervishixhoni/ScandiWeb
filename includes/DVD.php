@@ -2,7 +2,7 @@
 class DVD extends Product {
     private $size;
 
-    public function __construct($sku, $name, $price, $size) {
+    public function __construct($sku, $name, $price, $weight, $size, $length, $width, $height) {
         parent::__construct($sku, $name, $price, 'DVD');
         $this->size = $size;
     }
@@ -20,9 +20,4 @@ class DVD extends Product {
         $stmt->bindParam(':size', $this->size);
         $stmt->execute();
     }
-
-    public function getSpecificAttribute() {
-        return "Size: " . $this->size . " MB";
-    }
 }
-?>

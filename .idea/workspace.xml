@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f943b39-3d76-40a7-a8ca-21f39872c595" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/checksku.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d46310a-c581-42e6-98b8-89e5b34c0a86.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d46310a-c581-42e6-98b8-89e5b34c0a86/storage_v2/_src_/schema/product_app.0WYcpw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/DVD.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/DVD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Furniture.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Furniture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ProductFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.nginx-debian.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mass-delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/AddProduct.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/AddProduct.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/ProductList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +60,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.PHP&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/xhoni/PhpStorm-242.20224.44/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -55,8 +78,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PS-242.20224.112" />
-        <option value="bundled-php-predefined-a98d8de5180a-d6acee4cb394-com.jetbrains.php.sharedIndexes-PS-242.20224.112" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PS-242.20224.175" />
+        <option value="bundled-php-predefined-a98d8de5180a-d6acee4cb394-com.jetbrains.php.sharedIndexes-PS-242.20224.175" />
       </set>
     </attachedChunks>
   </component>
@@ -70,6 +93,11 @@
       <updated>1722266941704</updated>
       <workItem from="1722266942737" duration="1502000" />
       <workItem from="1722269496220" duration="5034000" />
+      <workItem from="1722437202075" duration="53000" />
+      <workItem from="1722438950098" duration="80000" />
+      <workItem from="1722439226935" duration="956000" />
+      <workItem from="1722440964124" duration="4269000" />
+      <workItem from="1722500277334" duration="7392000" />
     </task>
     <servers />
   </component>

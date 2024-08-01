@@ -5,7 +5,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://13.50.197.55/api/api.php')
+    axios.get('http://localhost:8000/api.php')
       .then(response => {
         setProducts(response.data.products);
       })
@@ -16,7 +16,7 @@ function ProductList() {
 
   const handleDelete = () => {
     const selectedIDs = products.filter(product => product.isChecked).map(product => product.id);
-    axios.delete('http://13.50.197.55/api/api.php', { data: { ids: selectedIDs } })
+    axios.delete('http://localhost:8000/api.php', { data: { ids: selectedIDs } })
       .then(() => {
         setProducts(products.filter(product => !selectedIDs.includes(product.id)));
       })
